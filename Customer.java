@@ -9,6 +9,7 @@ public class Customer
     public static HashMap<String,String> logininfo = new HashMap<String,String>();
 
     String UID;
+    private static int nextUserID = 1;
     String FName;
     String LName;
     String Username;
@@ -19,16 +20,16 @@ public class Customer
     BankAccount Account;
 
 
-    public Customer(String UID, String FName, String LName, String username, String password, String phoneNo, String address, BankAccount account) {
-       /* this.UID = GenerateUserID(); */
+    public Customer( String FName, String LName, String username, String password, String phoneNo, String address,  String accountType, double initialBalance) {
+        this.UID = generateUserID();
         this.FName = FName;
         this.LName = LName;
         Username = username;
         Password = password;
         PhoneNo = phoneNo;
         Address = address;
+        this.Account = new BankAccount(accountType, initialBalance);
 
-        Account = account;
     }
 
     public String getID() {
@@ -91,9 +92,32 @@ public class Customer
     public BankAccount getAccount() {
         return Account;
     }
+    public void deposit(double amount) {
+        Account.PerformTransaction("deposit", amount);
+    }
+
+
+    public void withdraw(double amount) {
+        Account.PerformTransaction("withdraw", amount);
+    }
+
+    public void gettranshistory() {
+        for (Transactions transaction : Account.transactions) {
+            System.out.println(transaction);
+        }
+    }
+
+
+    public void displayaccountdetails() {
+        System.out.println("account type is "+ Account.AccountType );
+        System.out.println("account balance is "+ Account.InitialBalance );
+    }
 
     public void setAccount(BankAccount account) {
         Account = account;
+    }
+    private String generateUserID() {
+        return String.format("%04d", nextUserID++);
     }
 }
 

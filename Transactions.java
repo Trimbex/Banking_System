@@ -5,10 +5,10 @@ public class Transactions
 
     String Date;
 
-    public Transactions(String transactionType, double amount, String date) {
+    public Transactions(String transactionType, double amount) {
         TransactionType = transactionType;
         this.amount = amount;
-        Date = date;
+
     }
 
     public String getTransactionType() {
@@ -33,6 +33,38 @@ public class Transactions
 
     public void setDate(String date) {
         Date = date;
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+
+        sb.append("--------------------------------------\n");
+        sb.append("              TRANSACTION              \n");
+        sb.append("--------------------------------------\n");
+
+
+        switch (TransactionType) {
+            case "deposit":
+                sb.append("Type:    Deposit\n");
+                break;
+            case "withdraw":
+                sb.append("Type:    Withdrawal\n");
+                break;
+            case "inquiry":
+                sb.append("Type:    Balance Inquiry\n");
+                break;
+            default:
+                sb.append("Type:    Unknown\n");
+                break;
+        }
+
+        sb.append("Amount:  $" + amount).append("\n");
+        sb.append("--------------------------------------\n");
+        sb.append("\n");
+        sb.append("--------------------------------------\n");
+
+        return sb.toString();
     }
 }
 
