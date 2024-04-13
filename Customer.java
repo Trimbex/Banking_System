@@ -20,13 +20,13 @@ public class Customer
     String Address;
 
     BankAccount Account;
- youssef
+
 
     public Customer( String FName, String LName, String username, String password, String phoneNo, String address,  String accountType, double initialBalance) {
         this.UID = generateUserID();
 
      
- main
+
         this.FName = FName;
         this.LName = LName;
         Username = username;
@@ -121,7 +121,7 @@ public class Customer
     public void setAccount(BankAccount account) {
         Account = account;
     }
- youssef
+
     private String generateUserID() {
         return String.format("%04d", nextUserID++);
     }
@@ -138,7 +138,7 @@ public class Customer
 
  
 
- main
+
 }
 
 
