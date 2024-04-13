@@ -8,6 +8,8 @@ public class Customer
 
     public static HashMap<String,String> logininfo = new HashMap<String,String>();
 
+    private static int nextuID = 1;
+
     String UID;
     private static int nextUserID = 1;
     String FName;
@@ -18,10 +20,13 @@ public class Customer
     String Address;
 
     BankAccount Account;
-
+ youssef
 
     public Customer( String FName, String LName, String username, String password, String phoneNo, String address,  String accountType, double initialBalance) {
         this.UID = generateUserID();
+
+     
+ main
         this.FName = FName;
         this.LName = LName;
         Username = username;
@@ -116,15 +121,34 @@ public class Customer
     public void setAccount(BankAccount account) {
         Account = account;
     }
+ youssef
     private String generateUserID() {
         return String.format("%04d", nextUserID++);
     }
+
+
+    public Customer getCustomerByName(String userName) {
+        for (Customer customer : customers) {
+            if (customer.getUsername().equals(userName)) {
+                return customer;
+            }
+        }
+        return null; 
+    }
+
+ 
+
+ main
 }
+
+
+
+
 
 /*
 TODO:
-  GetCustomerByName(String UserName) (returns customer object)
-  GenerateUserID()
+  GetCustomerByName(String UserName) (returns customer object) Done
+  GenerateUserID() Done
 
  */
 
