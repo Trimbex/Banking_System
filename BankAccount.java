@@ -1,8 +1,12 @@
+import java.util.ArrayList;
+
 public class BankAccount
 {
 
     String AccountType;
     double InitialBalance;
+
+    ArrayList<String> Transactions = new ArrayList<>(); //Transaction Log
 
     public BankAccount(String accountType) {
         AccountType = accountType;
@@ -23,6 +27,12 @@ public class BankAccount
     public void setInitialBalance(double initialBalance) {
         InitialBalance = initialBalance;
     }
-//TODO: Transaction history
+
 
 }
+/*
+TODO:
+ PerformTransaction(Transactions transaction, double amount);
+ GetTransactionHistory()
+ DisplayAccountDetails()
+ */

@@ -35,3 +35,14 @@ public class Transactions
         Date = date;
     }
 }
+
+/*
+*
+* TODO:
+*  ONLY FUNCTIONALITIES
+*  Withdraw(double amount)
+*  Deposit(double amount)
+*  Transfer(Customer customer, double amount)
+*
+*
+* */

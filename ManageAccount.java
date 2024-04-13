@@ -13,4 +13,12 @@ public class ManageAccount
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
+
+    /*
+    TODO
+     ChangePassword(String NewPassword)
+     ChangeUserName(String NewUsername)
+     ChangePhoneNumber(String number)
+     ChangeAddress(String newaddress)
+     */
 }

@@ -1,41 +1,42 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Customer
 {
-    int ID;
+
+    public static ArrayList<Customer> customers = new ArrayList<>();
+
+    public static HashMap<String,String> logininfo = new HashMap<String,String>();
+
+    String UID;
     String FName;
-
-
-
     String LName;
-
     String Username;
-
     String Password;
-
     String PhoneNo;
     String Address;
 
-    Card card;
-
     BankAccount Account;
 
-    public Customer(int ID, String FName, String LName, String username, String password, String phoneNo, String address, Card card, BankAccount account) {
-        this.ID = ID;
+
+    public Customer(String UID, String FName, String LName, String username, String password, String phoneNo, String address, BankAccount account) {
+       /* this.UID = GenerateUserID(); */
         this.FName = FName;
         this.LName = LName;
         Username = username;
         Password = password;
         PhoneNo = phoneNo;
         Address = address;
-        this.card = card;
+
         Account = account;
     }
 
-    public int getID() {
-        return ID;
+    public String getID() {
+        return UID;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setID(String UID) {
+        this.UID = UID;
     }
 
     public String getFName() {
@@ -86,13 +87,6 @@ public class Customer
         Address = address;
     }
 
-    public Card getCard() {
-        return card;
-    }
-
-    public void setCard(Card card) {
-        this.card = card;
-    }
 
     public BankAccount getAccount() {
         return Account;
@@ -102,6 +96,13 @@ public class Customer
         Account = account;
     }
 }
+
+/*
+TODO:
+  GetCustomerByName(String UserName) (returns customer object)
+  GenerateUserID()
+
+ */
 
 
 
