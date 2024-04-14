@@ -11,9 +11,14 @@ public class Main {
             cus.gettranshistory();
 
         Customer cus2 = new Customer("saif","mahmoud","sa","1232","0100398","dff","saving",40);
+
+        Customer.logininfo.put(cus.getUsername(),cus.getPassword());
+        Customer.customers.add(cus);
         cus2.withdraw(10);
 
         cus2.displayaccountdetails();
         cus2.gettranshistory();
+
+        cus2.transfer(23);
     }
 }

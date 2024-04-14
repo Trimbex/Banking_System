@@ -6,7 +6,7 @@ public class Customer
 
     public static ArrayList<Customer> customers = new ArrayList<>();
 
-    public static HashMap<String,String> logininfo = new HashMap<String,String>();
+    public static HashMap<String,String> logininfo = new HashMap<>();
 
     
 
@@ -20,6 +20,10 @@ public class Customer
     String Address;
 
     BankAccount Account;
+ public Customer()
+ {
+
+ }
 
 
     public Customer( String FName, String LName, String username, String password, String phoneNo, String address,  String accountType, double initialBalance) {
@@ -104,6 +108,11 @@ public class Customer
 
     public void withdraw(double amount) {
         Account.PerformTransaction("withdraw", amount);
+    }
+
+    public void transfer(double amount)
+    {
+        Account.PerformTransaction("transfer", amount);
     }
 
     public void gettranshistory() {

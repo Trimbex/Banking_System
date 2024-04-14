@@ -5,6 +5,8 @@ public class Transactions
 
     String Date;
 
+    Customer customer;
+
     public Transactions(String transactionType, double amount) {
         TransactionType = transactionType;
         this.amount = amount;
@@ -54,27 +56,23 @@ public class Transactions
             case "inquiry":
                 sb.append("Type:    Balance Inquiry\n");
                 break;
+            case "transfer":
+                sb.append("Type:    Transfer\n");
+                break;
             default:
                 sb.append("Type:    Unknown\n");
                 break;
         }
 
-        sb.append("Amount:  $" + amount).append("\n");
+        sb.append("Amount:  $").append(amount).append("\n");
         sb.append("--------------------------------------\n");
         sb.append("\n");
         sb.append("--------------------------------------\n");
 
         return sb.toString();
     }
+
+
 }
 
-/*
-*
-* TODO:
-*  ONLY FUNCTIONALITIES
-*  Withdraw(double amount)
-*  Deposit(double amount)
-*  Transfer(Customer customer, double amount)
-*
-*
-* */
+
