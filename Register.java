@@ -5,7 +5,7 @@ public class Register {
     public Register() {
         Scanner scanner = new Scanner(System.in);
         
-        // Prompt the user for customer information
+        
         System.out.println("Enter first name:");
         String FName = scanner.nextLine();
         
