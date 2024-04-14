@@ -8,7 +8,7 @@ public class Customer
 
     public static HashMap<String,String> logininfo = new HashMap<String,String>();
 
-    private static int nextuID = 1;
+    
 
     String UID;
     private static int nextUserID = 1;
