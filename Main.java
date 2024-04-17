@@ -14,11 +14,20 @@ public class Main {
 
         Customer.logininfo.put(cus.getUsername(),cus.getPassword());
         Customer.customers.add(cus);
-        cus2.withdraw(10);
 
-        cus2.displayaccountdetails();
-        cus2.gettranshistory();
+        ManageAccount manageAccount = new ManageAccount(cus2);
+        System.out.println(cus2.getPassword());
 
-        cus2.transfer(23);
+        manageAccount.changePassword("2222222");
+        System.out.println(cus2.getPassword());
+
+        manageAccount.changeUserName("newUsername");
+        manageAccount.changePhoneNumber("newPhoneNumber");
+        manageAccount.changeAddress("newAddress");
+        System.out.println(cus2.getUsername());
+        System.out.println(cus2.getPhoneNo());
+        System.out.println(cus2.getAddress());
+
+        
     }
 }

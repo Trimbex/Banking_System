@@ -9,7 +9,7 @@ public class Customer
     public static HashMap<String,String> logininfo = new HashMap<>();
 
     
-
+ManageAccount manage;
     String UID;
     private static int nextUserID = 1;
     String FName;
@@ -145,7 +145,6 @@ public class Customer
         return null; 
     }
 
- 
 
 
 }
