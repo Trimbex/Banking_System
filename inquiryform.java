@@ -10,7 +10,8 @@ public class inquiryform {
     JFrame dep = new JFrame();
 
     Customer customer;
-    inquiryform(){
+    inquiryform(Customer customer){
+        this.customer = customer;
         dep.setSize(600,600);
         dep.setVisible(true);
         dep.setContentPane(inquiry);
@@ -18,7 +19,7 @@ public class inquiryform {
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                check();
             }
         });
     }

@@ -14,7 +14,13 @@ public class home extends JFrame  {
     private JButton accountDetailsButton;
 
     JFrame frame = new JFrame();
-   home(){
+
+    private Customer customer; // Declare a Customer object
+
+
+
+    home(Customer customer){
+        this.customer = customer;
        frame.setSize(600,600);
        frame.setVisible(true);
        frame.setContentPane(home);
@@ -30,7 +36,7 @@ public class home extends JFrame  {
    }
 
 public void gotodeposit(){
-   inquiryform nav = new inquiryform();
+   inquiryform nav = new inquiryform( customer);
 
 }
 
