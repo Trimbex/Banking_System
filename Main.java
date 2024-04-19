@@ -1,5 +1,12 @@
 public class Main {
     public static void main(String[] args) {
+
+
+        home homeForm = new home();
+
+
+
+
         // Create a customer
         Customer cus = new Customer("youssef", "mahmoud", "yo", "123", "0100398", "dff", "checking", 22);
         // Deposit some amount to the customer's account
