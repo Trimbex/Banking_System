@@ -12,6 +12,7 @@ public class home extends JFrame  {
     private JButton transactionHistoryButton;
     private JPanel home;
     private JButton accountDetailsButton;
+    private JLabel welcome;
 
     JFrame frame = new JFrame();
 
@@ -24,11 +25,12 @@ public class home extends JFrame  {
        frame.setSize(600,600);
        frame.setVisible(true);
        frame.setContentPane(home);
-
+       welcome();
 
        inquiryButton.addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {
+
                gotodeposit();
                 frame.dispose();
            }
@@ -40,5 +42,8 @@ public void gotodeposit(){
 
 }
 
+public void welcome(){
+        welcome.setText("welcome " + customer.FName);
+}
 
 }
