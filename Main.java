@@ -1,16 +1,16 @@
 public class Main {
     public static void main(String[] args) {
 
-
-        home homeForm = new home();
+        Customer cus = new Customer("youssef", "mahmoud", "yo", "123", "0100398", "dff", "checking", 22);
+        // Deposit some amount to the customer's account
+        cus.deposit(100);
+        home homeForm = new home(cus);
 
 
 
 
         // Create a customer
-        Customer cus = new Customer("youssef", "mahmoud", "yo", "123", "0100398", "dff", "checking", 22);
-        // Deposit some amount to the customer's account
-        cus.deposit(100);
+
         // Display account details and transaction history
         cus.displayaccountdetails();
         cus.gettranshistory();
